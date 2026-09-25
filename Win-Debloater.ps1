@@ -1008,7 +1008,7 @@ function Restore-WinDebloaterService {
         }
 
         Set-Service -Name $ServiceName -StartupType $startMode -ErrorAction Stop
-        Write-Log "Service restored to $startMode: $ServiceName" "Success"
+        Write-Log "Service restored to ${startMode}: $ServiceName" "Success"
     } catch {
         Write-Log "Could not restore service '$ServiceName': $($_.Exception.Message)" "Error"
     }
